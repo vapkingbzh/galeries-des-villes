@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.conteneur{
+    display: grid;
+    margin: 2em;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1em;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    filter: blur(0px) grayscale(0);
+    transition: filter 0.5s ease-out;
+}
+
+.title{
+    font-size: 2em;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 0.4em;
+    z-index: 2;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(90, 0, 10, 0.3);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0,5s ease-out;
+    text-shadow: 2px 2px 10px black;
+
+
+}
+
+article:hover{
+    z-index: 1;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+article:hover img{
+    filter: blur(2px) grayscale(.5);
+    transition: filter 0.2s ease-in;
+
+
+}
+
+article:hover .title{
+    opacity: 1;
+    transition: all .4s ease-in;
+    text-shadow: 4px 5px 10px blue;
+    
+
+}
